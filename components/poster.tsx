@@ -57,7 +57,7 @@ function LearnCard({ icon, label, sub }: { icon: React.ReactNode; label: string;
       <span className="font-sans font-black text-[11px] text-center whitespace-nowrap leading-none" style={{ color: INK }}>
         {label}
       </span>
-      <span className="font-sans text-[8px] text-center leading-tight" style={{ color: `${TEAL}99` }}>
+      <span className="font-sans text-[7px] text-center leading-tight whitespace-nowrap" style={{ color: `${TEAL}99` }}>
         {sub}
       </span>
     </div>
@@ -115,12 +115,7 @@ export default function Poster() {
               </div>
             </div>
           </div>
-          <div
-            className="px-3 py-1 rounded-full font-sans font-bold text-[9.5px] tracking-widest flex-shrink-0 whitespace-nowrap"
-            style={{ background: VERMIL, color: WHITE }}
-          >
-            讲座沙龙
-          </div>
+
         </div>
 
         {/* Gold stripe */}
@@ -258,22 +253,6 @@ export default function Poster() {
             className="flex flex-col flex-1 rounded-xl overflow-hidden min-h-0"
             style={{ background: CREAM, border: `1px solid ${TEAL}18` }}
           >
-            {/* 卡片标题 */}
-            <div
-              className="flex items-center gap-2 px-3 py-1.5 flex-shrink-0"
-              style={{ background: `${TEAL}12`, borderBottom: `1px solid ${TEAL}20` }}
-            >
-              <div
-                className="w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0"
-                style={{ background: TEAL }}
-              >
-                <CrossLogo size={9} />
-              </div>
-              <span className="font-sans font-bold text-[10px] tracking-wide whitespace-nowrap" style={{ color: TEAL2 }}>
-                主讲嘉宾介绍
-              </span>
-            </div>
-
             {/* 左图 ~41% + 右侧资历 ~59% */}
             <div className="flex flex-1 gap-4 px-3 py-2 min-h-0">
               <div
@@ -293,11 +272,9 @@ export default function Poster() {
                 <div className="w-12 h-px mb-1.5" style={{ background: `${TEAL}30` }} />
                 <div className="flex flex-col justify-between flex-1 min-h-0">
                   {[
-                    "国家注册执业中医师",
                     "从业经验 12 年",
                     "服务客户逾 5000 人次",
                     "专注亚健康体质调理",
-                    "短视频粉丝 20W+",
                     "帮助 50+ 机构引流增长",
                     "爆款内容打造实战专家",
                   ].map((item) => (
@@ -317,29 +294,16 @@ export default function Poster() {
 
         {/* ══ TIME & LOCATION ════════════════════════════════ */}
         <div
-          className="flex items-center justify-between px-4 py-1 flex-shrink-0"
+          className="flex items-center justify-center gap-2 px-4 py-1.5 flex-shrink-0"
           style={{ background: TEAL2 }}
         >
-          <div className="flex items-center gap-1.5">
-            <svg viewBox="0 0 16 16" fill="none" width="10" height="10" aria-hidden="true">
-              <circle cx="8" cy="8" r="7" stroke={GOLD} strokeWidth="1.4" />
-              <line x1="8" y1="4.5" x2="8" y2="8.5" stroke={WHITE} strokeWidth="1.4" strokeLinecap="round" />
-              <line x1="8" y1="8.5" x2="10.5" y2="10" stroke={WHITE} strokeWidth="1.4" strokeLinecap="round" />
-            </svg>
-            <span className="font-sans font-bold text-[10px] whitespace-nowrap" style={{ color: WHITE }}>
-              2026.6.6&nbsp;&nbsp;14:00
-            </span>
-          </div>
-          <div className="w-px h-3 flex-shrink-0" style={{ background: `${WHITE}30` }} />
-          <div className="flex items-center gap-1.5 justify-end">
-            <svg viewBox="0 0 16 16" fill="none" width="10" height="10" className="flex-shrink-0" aria-hidden="true">
-              <path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5z" stroke={GOLD} strokeWidth="1.3" />
-              <circle cx="8" cy="6" r="1.6" fill={WHITE} />
-            </svg>
-            <span className="font-sans text-[9px] leading-none text-right whitespace-nowrap" style={{ color: `${WHITE}CC` }}>
-              松江 · 袜子弄米念园区18号8栋201室
-            </span>
-          </div>
+          <svg viewBox="0 0 16 16" fill="none" width="10" height="10" className="flex-shrink-0" aria-hidden="true">
+            <path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5z" stroke={GOLD} strokeWidth="1.3" />
+            <circle cx="8" cy="6" r="1.6" fill={WHITE} />
+          </svg>
+          <span className="font-sans text-[10px] font-semibold leading-none whitespace-nowrap" style={{ color: `${WHITE}CC` }}>
+            松江 · 袜子弄米念园区18号8栋201室 &nbsp;|&nbsp; 2026.6.6 &nbsp;14:00
+          </span>
         </div>
 
       </div>
